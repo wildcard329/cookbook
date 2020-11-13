@@ -4,15 +4,14 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: {
-      host: '127.0.0.1',
-      user: '',
-      password: '',
-      database: ''
-    },
+    connection: 'postgres://localhost/cookbook',
     migrations: {
       directory: './data/migrations'
-    }
+    },
+    seeds: {
+      directory: './data/seeds/dev'
+    },
+    useNullAsDefault: true
   },
 
   staging: {
